@@ -1,0 +1,23 @@
+function [DSSCircuit] = fixTaps(DSSCircuit,tapNum)
+DSSCircuit.RegControls.First;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+DSSCircuit.RegControls.Next;
+DSSCircuit.RegControls.TapNumber=tapNum;
+DSSCircuit.RegControls.MaxTapChange=0;
+end
