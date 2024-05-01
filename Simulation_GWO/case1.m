@@ -11,6 +11,7 @@ for ii = 1:96 % 24*4
     DSSCircuit = DSSObj.ActiveCircuit;
     DSSText.Command = 'Compile (C:\Program Files\OpenDSS\IEEETestCases\123Bus\IEEE123Master.dss)';
     fixTaps(DSSCircuit,5);
+    createev(DSSText);
     adjustload(ii, DSSCircuit);
     
     DSSText.Command = 'solve';

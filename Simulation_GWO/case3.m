@@ -6,7 +6,7 @@ Vcn = zeros (96,95);
 MytotalCircuitLosses= zeros(96, 1);
 P = zeros(96, 15); %charging and discharging power of storages
 SoC = zeros(96, 15);
-SoC(1, :) = 500;
+SoC(1, :) = 1000;
 
 for ii = 1:96
     DSSObj=startTheEngine();
@@ -14,6 +14,7 @@ for ii = 1:96
     DSSCircuit = DSSObj.ActiveCircuit;
     DSSText.Command = 'Compile (C:\Program Files\OpenDSS\IEEETestCases\123Bus\IEEE123Master.dss)';
     fixTaps(DSSCircuit,5);
+    createev(DSSText);
     adjustload(ii, DSSCircuit);
     createpv(DSSText);
     adjustpv(ii, DSSText);

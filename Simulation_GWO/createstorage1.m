@@ -13,13 +13,13 @@ c='New Load.Bt3 phases=1 bus1=29.3 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
 DSSText.Command = strcat(c);
 
 
-d='New Load.Bt4 phases=1 bus1=35.1 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
+d='New Load.Bt4 phases=1 bus1=40.1 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
 DSSText.Command = strcat(d);
 
-e='New Load.Bt5 phases=1 bus1=35.2 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
+e='New Load.Bt5 phases=1 bus1=40.2 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
 DSSText.Command = strcat(e);
 
-f='New Load.Bt6 phases=1 bus1=35.3 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
+f='New Load.Bt6 phases=1 bus1=40.3 kV=2.4 Conn=wye kW=50 kVA=50 kvar=0';
 DSSText.Command = strcat(f);
 
 

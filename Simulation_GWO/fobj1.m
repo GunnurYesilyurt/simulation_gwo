@@ -9,38 +9,74 @@ end
 
 DSSText.Command = 'solve';
 
+
+%fitness = DSSCircuit.Losses(1,1);
+
+
 Van = zeros(1, 99);
 Vbn = zeros(1, 84);
 Vcn = zeros(1, 95);
 [Van, Vbn, Vcn] = getbusinfo(DSSCircuit, 1, Van, Vbn, Vcn);
 
-
-%total voltage deviation at time ii:
-total_dev = 0;
+%{
+over = 0;
+under = 0;
 j = 1;
 while j <= 99
-    total_dev = total_dev + (1 - Van(1, j))^2;
+
+    if Van(j) > 1.05 
+        over = over + 1;
+    end
+    if Van(j) < 0.95
+        under = under + 1;
+    end
     j = j +  1;
 end
+
 j = 1;
 while j <= 84
-    total_dev = total_dev + (1 - Vbn(1, j))^2;
+    if Vbn(j) > 1.05 
+        over = over + 1;
+    end
+    if Vbn(j) < 0.95
+        under = under + 1;
+    end
     j = j + 1;
 end
+
 j = 1;
 while j <= 95
-    total_dev = total_dev + (1 - Vcn(1, j))^2;
+    if Vcn(j) > 1.05 
+        over = over + 1;
+    end
+    if Vcn(j) < 0.95
+        under = under + 1;
+    end
     j = j + 1;
 end
+fitness = over + under;
+%}
+
+total_dev = 0;
+j = 1;
+    while j <= 99
+        total_dev = total_dev + (1 - Van(1, j))^2;
+        j = j +  1;
+    end
+
+    j = 1;
+    while j <= 84
+        total_dev = total_dev + (1 - Vbn(1, j))^2;
+        j = j + 1;
+    end
+
+    j = 1;
+    while j <= 95
+        total_dev = total_dev + (1 - Vcn(1, j))^2;
+        j = j + 1;
+    end
 
 fitness = total_dev;
 
 
-
-
-
-
-
-
 end
-
