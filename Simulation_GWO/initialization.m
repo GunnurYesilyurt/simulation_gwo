@@ -15,6 +15,9 @@
 %               Software , in press,                                %
 %               DOI: 10.1016/j.advengsoft.2013.12.007               %
 %                                                                   %
+%                                                                   %
+%  Adapted and integrated into IEEE 123-Bus ESS Optimization        %
+%  Project by Gunnur Yesilyurt.                                     %                           %
 %___________________________________________________________________%
 
 % This function initialize the first population of search agents

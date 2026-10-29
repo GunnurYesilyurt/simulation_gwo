@@ -15,6 +15,9 @@
 %               Software , in press,                                %
 %               DOI: 10.1016/j.advengsoft.2013.12.007               %
 %                                                                   %
+%                                                                   %
+%  Adapted and integrated into IEEE 123-Bus ESS Optimization        %
+%  Project by Gunnur Yesilyurt.                                     %                           %
 %___________________________________________________________________%
 
 % You can simply define your cost in a seperate file and load its handle to fobj 
